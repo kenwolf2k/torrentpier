@@ -1,7 +1,7 @@
 ### TorrentPier ###
 .idea
 .php_cs.cache
-composer.phar
+.env
 configs/local.php
 data/avatars
 data/torrent_files
@@ -12,7 +12,6 @@ internal_data/log
 internal_data/sitemap
 internal_data/triggers
 library/config.local.php
-vendor
 
 ### Archives ###
 *.log
