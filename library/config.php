@@ -597,7 +597,7 @@ $bb_cfg['page'] = [
     ],
     'show_sidebar2' => [
         #BB_SCRIPT => true
-        'index' => true,
+        'index' => false,
     ]
 ];
 
