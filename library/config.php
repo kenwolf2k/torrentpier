@@ -11,9 +11,10 @@ if (!defined('BB_ROOT')) {
     die(basename(__FILE__));
 }
 
-$domain_name = 'torrentpier.com'; // enter here your primary domain name of your site
+
+$domain_name = env('DOMAIN_NAME', 'torrentpier.com'); // enter here your primary domain name of your site
 $domain_name = !empty($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : $domain_name;
-$domain_ssl = false;
+$domain_ssl = strtolower(env('DOMAIN_SSL', '')) == 'yes' ? true: false ;
 
 $bb_cfg = [];
 
@@ -567,8 +568,8 @@ $bb_cfg['group_avatars'] = [
 // Get a Google reCAPTCHA API Key: https://www.google.com/recaptcha/admin
 $bb_cfg['captcha'] = [
     'disabled' => false,
-    'public_key' => '', // your public key
-    'secret_key' => '', // your secret key
+    'public_key' => env('RECAPTCHA_PUB', ''), // your public key
+    'secret_key' => env('RECAPTCHA_SEC', ''), // your secret key
     'theme' => 'light', // light or dark
 ];
 
