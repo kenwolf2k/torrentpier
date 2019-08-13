@@ -2,6 +2,7 @@
 .idea
 .php_cs.cache
 .env
+vaendor
 configs/local.php
 data/avatars
 data/torrent_files

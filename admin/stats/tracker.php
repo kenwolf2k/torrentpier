@@ -25,6 +25,8 @@ $stat = array();
 
 define('TMP_TRACKER_TABLE', 'tmp_tracker');
 
+var_dump(BB_BT_TRACKER);
+
 DB()->query('
 	CREATE TEMPORARY TABLE ' . TMP_TRACKER_TABLE . " (
 		`topic_id` mediumint(8) unsigned NOT NULL default '0',
